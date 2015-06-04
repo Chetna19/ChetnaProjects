@@ -1,0 +1,253 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+		controllerName="newklouddata.CreatePage" xmlns:html="http://www.w3.org/1999/xhtml">
+		<Panel>
+        <headerToolbar>
+          <Toolbar>        
+            <Button  id="button4" text="" icon="sap-icon://nav-back" tooltip="add a record" justifyalign="center" width="50px" press="onPressBack" ></Button>
+             <Label text="Create Record" design="Bold"/>
+          </Toolbar>
+        </headerToolbar>
+
+        <FlexBox
+          alignItems="Center"
+          justifyContent="Start">
+          <items>
+           <VBox>
+
+<Label text="Country From" design="Bold" />
+<Input id="idCountry" design="Bold" width="100%" />
+
+                                       
+<Label text="City From" design="Bold" />
+<Input id="idCityFrom" design="Bold" width="100%" />
+
+<Label text="City To" design="Bold" />
+<Input id="idCityTo" design="Bold" width="100%" />
+
+</VBox>
+       </items>
+        </FlexBox>
+ <FlexBox
+          alignItems="Center"
+          justifyContent="Center">
+          <items>
+              <VBox>
+              <Button text="submit" justifyContent="Center" width="100px" press="onCreate" ></Button>
+              </VBox>
+              </items>
+              </FlexBox>
+      </Panel>    
+<!--  <Page title="Create a Record"
+	    showNavButton="true"
+	     navButtonTap="actBack">
+		<l:VerticalLayout
+    class="marginVerticalContent"
+    width="100%">
+    <l:content>
+   <Label text="countryFrom"  />
+      <Input
+        id="idInputCountry"
+        type="Text"
+        value="{
+
+          type : 'sap.ui.model.type.String',
+          constraints : {
+            minLength: 1,
+            maxLength: 10
+          }
+        }" />       
+      <Label text="cityFrom" />
+      
+      <Input
+        id="idInputcityFrom"
+        type="Text"
+        value="{
+        
+          type : 'sap.ui.model.type.String',
+          constraints : {
+            minLength: 1,
+            maxLength: 10
+          }
+        }" />
+          
+      <Label text="airportFrom" />    
+      <Input
+        id="idInputairportFrom"
+        type="Text"
+        value="{
+          type : 'sap.ui.model.type.String',
+          constraints : {
+            minLength: 1,
+            maxLength: 10
+          }
+        }" />     
+      <Label text="cityTo" design="Bold" />   
+      <Input
+        id="idInputcityTo"
+        type="Text"
+        value="{  
+          type : 'sap.ui.model.type.String',
+          constraints : {
+            minLength: 1,
+            maxLength: 10
+          }
+        }" />     
+     <Button id="Submit" text="create" width="110px" press="onCreate" ></Button>
+    </l:content>
+  </l:VerticalLayout>-->
+   <html:style>
+    .sapMTB-Transparent-CTX .sapMLabel {
+    margin-right: 1rem;
+    font-weight: normal;
+    font-size: 1rem;
+    font-family: Arial,Helvetica,sans-serif;
+    text-shadow: 0 1px 0 #100101;
+    color:#f4e5a3;
+}
+
+       .sapMNavItem, .sapMNavItem.sapMPage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  height: 100%;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  background-color: #294974;
+}
+.sapMPanelContent {
+  padding: 1rem;
+  border-bottom: 0px solid #e5e5e5;
+}
+.sapMPanelBG {
+  background-color: #294974;
+}
+.sapMBtn {
+  height: 3.0rem;
+  min-width: 3.0rem;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+  background-color: #003366;
+  border: 1px solid #bfbfbf;
+  color: #003366;
+  text-shadow: 0 1px 0 #56533A;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 0.875rem;
+}
+
+
+       sapMInputBaseInner {
+  color: #000000;
+  background-color: #294974;
+  border: 1px solid #bfbfbf;
+  border-radius: 0;
+  -webkit-appearance: none;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 0.875rem;
+  font-family: Arial,Helvetica,sans-serif;
+  line-height: normal;
+  height: 2.5rem;
+  vertical-align: middle;
+  padding: 0 0.75rem;
+}
+.sapMInputBaseInner {
+  color: #f4e5a3;
+  background-color: #294974;
+  border: 1px solid #787F81;
+  border-radius: 0;
+  -webkit-appearance: none;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 0.875rem;
+  font-family: Arial,Helvetica,sans-serif;
+  line-height: normal;
+  height: 2.5rem;
+  vertical-align: middle;
+  padding: 0 0.75rem;
+}
+.sapMInputBase, .sapMInputBaseInner {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font: inherit;
+}
+.sapMInputBaseInner {
+  color: #f4e5a3;
+  background-color: #294974;
+  border: 1px solid #bfbfbf;
+  border-radius: 0;
+  -webkit-appearance: none;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 0.875rem;
+  font-family: Arial,Helvetica,sans-serif;
+  line-height: normal;
+  height: 2.5rem;
+  vertical-align: middle;
+  padding: 0 0.75rem;
+}
+.sapMInputBase, .sapMInputBaseInner {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font: inherit;
+}
+.sapMInputBaseInner {
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #bfbfbf;
+  border-radius: 0;
+  -webkit-appearance: none;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 0.875rem;
+  font-family: Arial,Helvetica,sans-serif;
+  line-height: normal;
+  height: 2.5rem;
+  vertical-align: middle;
+  padding: 0 0.75rem;
+}
+.sapMInputBase, .sapMInputBaseInner {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font: inherit;
+}
+.sapMInputBaseInner {
+  color: #f4e5a3;
+  background-color: #294974;
+  border: 1px solid #bfbfbf;
+  border-radius: 0;
+  -webkit-appearance: none;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 0.875rem;
+  font-family: Arial,Helvetica,sans-serif;
+  line-height: normal;
+  height: 2.5rem;
+  vertical-align: middle;
+  padding: 0 0.75rem;
+}
+
+  .sapMInputBase>.sapMInputBaseInner, .sapMInputBasePlaceholder {
+  width: 300%;
+}
+
+
+</html:style>
+	<!-- </Page> -->
+</core:View>
+

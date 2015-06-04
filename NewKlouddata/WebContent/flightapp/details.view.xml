@@ -1,0 +1,366 @@
+﻿<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+     xmlns:la="sap.ui.commons.layout" xmlns:c="sap.ui.commons"
+		controllerName="flightapp.details" xmlns:html="http://www.w3.org/1999/xhtml">
+
+  <html:style>
+    .sapUiIcon:before {
+  content: attr(data-sap-ui-icon-content);
+  speak: none;
+  font-weight: bolder;
+  color: rgba(216, 230, 225, 1);
+  -webkit-font-smoothing: antialiased;
+}
+.sapMIBar-CTX .sapMTitle {
+  color: rgba(247, 228, 28, 1);
+  text-shadow: none;
+}
+.sapMTitleStyleAuto {
+  font-size: 1.5rem;
+}
+    .sapMBtn:hover>.sapMBtnHoverable {
+    background-image: none;
+    background-color: #1C3454;
+    }
+
+    .sapMBtnIcon {
+    color: rgb(242, 241, 235);
+    font-size: 1.375rem;
+    line-height: 2.375rem;
+    width: 2.375rem;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    max-height: 2.375rem;
+    background-color: rgba(31, 64, 108, 0);
+    }
+    .sapMPanel {
+    overflow: hidden;
+    background-color: #003366;
+    }
+    .sapMBtnInner {
+    height: 2.500rem;
+    min-width: 2.500rem;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    border: 1px solid #EFDEDE;
+    border-radius: 0.125rem;
+    color: #0D0505;
+    text-shadow: 0 1px 0 #180A0A;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 0.875rem;
+    background-color: #294974;
+    background: -ms-linear-gradient(top,#f7f7f7 0,#f2f2f2 100%);
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0,#f7f7f7),color-stop(1,#f2f2f2));
+    background: -webkit-linear-gradient(top,#093673 0,#294974 100%);
+    background: linear-gradient(top,#f7f7f7 0,#f2f2f2 100%);
+    }
+
+    .sapMBtnInner {
+    height: 2.500rem;
+    min-width: 2.500rem;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    border: 1px solid #F9C703;
+    border-radius: 0.125rem;
+    color: #0D0505;
+    text-shadow: 0 1px 0 #DD0F0F;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 0.875rem;
+    background-color: #294974;
+    background: -ms-linear-gradient(top,#f7f7f7 0,#f2f2f2 100%);
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0,#f7f7f7),color-stop(1,#f2f2f2));
+    background: -webkit-linear-gradient(top,#093673 0,#294974 100%);
+    background: linear-gradient(top,#f7f7f7 0,#f2f2f2 100%);
+    }
+   
+
+    .sapMListFtr {
+    height: 2rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-text-size-adjust: none;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    background-color: #194A79;
+    color: #EFE414;
+    padding: 0 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 700;
+    }
+
+    .sapMPanelContent {
+    padding: 1rem;
+    border-bottom: 1px solid #E6EEF5;
+    }
+    .sapMPanelBG {
+    background-color: rgba(25, 74, 121, 1);
+    }
+
+    .sapMLabel {
+    color: darkgrey;
+    font-size: 1.3rem;
+    font-family: Arial,Helvetica,sans-serif;
+    font-weight: normal;
+    }
+    
+   .sapUiTvAlignLeft {
+  text-align: center;
+  color: #F9C703;
+}
+
+    .sapUiTfStd {
+    background-color: #194A79;
+    color: #000000;
+    }
+    .sapUiTfBrd {
+    border: 0.1px solid #1D1919;
+    -webkit-border-radius: 0;
+    }
+    
+   .sapMTB-Transparent-CTX .sapMLabel {
+  margin-right: 1rem;
+  font-weight: normal;
+  font-size: 1.2rem;
+  font-family: Arial,Helvetica,sans-serif;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0);
+  color: #F9C703;
+}
+    .sapMListHdr {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font: normal 1.5rem Arial,Helvetica,sans-serif;
+    text-shadow: 0 1px 0 #121111;
+    color: rgb(250, 230, 27);
+    font-weight: 700;
+    height: 3rem;
+    line-height: 3rem;
+    padding: 0 1rem;
+    background-color: rgba(41, 73, 116, 1);
+    border-bottom: 1px solid #cccccc;
+    }
+   
+    .sapUiTv {
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 16px;
+    }
+
+
+  #__xmlview2--txtLocation {
+  background-color: #194A79;
+}
+
+   #__xmlview2--listback {
+  border-style: solid 0px;
+  background-clip: padding-box;
+  margin: 0px;
+  min-height: 32px;
+  min-width: 25px;
+  padding: 4px 8px;
+  border-width: 2px;
+  font-size: 11pt;
+  font-weight: 600;
+  line-height: 1.3636;
+}
+
+button:hover, input[type=button]:hover, input[type=reset]:hover {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.sapUiIcon:before {
+      content: attr(data-sap-ui-icon-content);
+      speak: none;
+      font-weight: bolder;
+      color: #F9C703;
+      -webkit-font-smoothing: antialiased;
+      }
+      
+  .sapMSLIImgIcon, .sapMSLIImgFirstIcon {
+      font-size: 1.375rem;
+      color: #F9C703;
+      margin-left: -1rem;
+      }
+      .sapMLIBImgNav {
+      width: 3rem;
+      height: 3rem;
+      line-height: 3rem;
+      font-size: 0.75rem;
+      color: #F9C703;
+      }
+      
+  .sapMPanelContent {
+  padding: 1rem;
+  border-bottom: 1px solid #F9C703;
+}
+
+  .sapMTB {
+  padding: 0;
+  height: 3rem;
+  background: rgba(25, 74, 121, 1);
+  border-bottom: 1px solid #F9C703;
+}
+
+  .sapMPage>section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color:rgb(25, 74, 121);
+}
+  </html:style>
+  <!-- <Page showHeader="false">
+
+    <Panel>
+      <headerToolbar>
+        <Toolbar>
+          <Button id="listback" icon="sap-icon://nav-back" press="goBack" />
+          <Label text="Flight Details" />
+        </Toolbar>
+      </headerToolbar>
+
+
+      <FlexBox
+     
+           alignItems="Start"
+           justifyContent="Start">
+        <VBox>
+          <items>
+            <Label text="countryFrom"/>
+            <c:TextView value="{flightDetails/countryFrom}" text="US"/>
+            <Label text="cityFrom"/>
+            <c:TextView value="{flightDetails/cityFrom}" text="new york"/>
+            <Label text="airportFrom"/>
+            <c:TextView value="{flightDetails/airportFrom}" text="JFK"/>
+            <Label text="countryTo"/>
+            <c:TextView value="{flightDetails/countryTo}" text="US"/>
+            <Label text="cityTo"/>
+            <c:TextView value="{flightDetails/countryTo}" text="SAN FRANCISCO"/>
+          </items>
+        </VBox>
+      </FlexBox>
+    </Panel>
+
+    <Panel>
+      <FlexBox
+           alignItems="End"
+           justifyContent="End">
+
+        <items>
+          <VBox>
+            <Button id="picBtn"  icon="sap-icon://camera" tooltip="Click a Photo" press="pickme"/>
+            <Image id="pic" src=""></Image>
+
+          </VBox>
+        </items>
+
+      </FlexBox>
+    </Panel>
+
+    <Panel>
+      <VBox>
+
+        <Button id="locationBtn"  icon="sap-icon://map" tooltip="Find Your Location" press="findme"/>
+        <html:div id="locationSection" class="mainChild subsection">
+
+          <html:div id="locationControls">
+            <html:div>
+              <html:input id="txtLocation" type="text" style="background-color:#194A79"></html:input>
+            </html:div>
+
+          </html:div>
+          <html:div id="mapDiv" style="position:relative;width:300px;height:400px;"></html:div>
+        </html:div>
+
+      </VBox>
+    </Panel>
+    <Panel>
+      <FlexBox
+           alignItems="End"
+           justifyContent="End">
+
+        <items>
+
+          <Image  src="flightapp/images/image001.jpg"/>
+
+        </items>
+
+      </FlexBox>
+    </Panel>
+
+
+
+
+
+  </Page> -->
+  
+   <Page showHeader="false">
+
+  <Panel>
+    <headerToolbar>
+      <Toolbar>
+        <Button
+     type="Back" press="goBack" />
+        <Label text="Flight Details" />
+      </Toolbar>
+    </headerToolbar>
+  
+    <FlexBox
+         alignItems="Start"
+         justifyContent="Start">
+      <VBox>
+        <items>     
+ <Label text="countryFrom"/>
+ <c:TextView value="{flightDetails/countryFrom}" text="US"/>
+ <Label text="cityFrom"/>
+ <c:TextView value="{flightDetails/cityFrom}" text="new york"/>
+ <Label text="airportFrom"/>
+ <c:TextView value="{flightDetails/airportFrom}" text="JFK"/>
+ <Label text="countryTo"/>
+ <c:TextView value="{flightDetails/countryTo}" text="US"/>
+ <Label text="cityTo"/>
+ <c:TextView value="{flightDetails/countryTo}" text="SAN FRANCISCO"/>
+ <Label text="flightTime"/>
+ <c:TextView value="{flightDetails/flightTime}" text="361"/>
+ <Label text="departureTime"/>
+ <c:TextView value="{flightDetails/departureTime}" text="PT11H00M00S"/>
+ <Label text="arrivalTime"/>
+ <c:TextView value="{flightDetails/arrivalTime}" text="PT14H01M00S"/>
+ 
+       </items>
+      </VBox>
+    </FlexBox>
+  </Panel>
+   <Toolbar>
+        <ToolbarSpacer></ToolbarSpacer>
+        <ToolbarSpacer></ToolbarSpacer>
+        <ToolbarSpacer></ToolbarSpacer>
+        <ToolbarSpacer></ToolbarSpacer>
+         <ToolbarSpacer></ToolbarSpacer>
+        <ToolbarSpacer></ToolbarSpacer>
+         <ToolbarSpacer></ToolbarSpacer>
+        <ToolbarSpacer></ToolbarSpacer>
+        <Button id="picBtn9"  icon="sap-icon://camera" tooltip="Click a Photo" press="pickme"/> 
+      
+        <Button id="locationBtn9"  icon="sap-icon://map" tooltip="Find Your Location" press="findme"/>
+        <ToolbarSpacer></ToolbarSpacer>
+      </Toolbar>
+      
+  <Panel>
+    <FlexBox
+         alignItems="End"
+         justifyContent="End">
+      <items>
+        <Image  src="flightapp\images\image001.jpg"/>
+      </items>
+    </FlexBox>
+  </Panel> 
+ 
+  </Page>  
+</core:View>

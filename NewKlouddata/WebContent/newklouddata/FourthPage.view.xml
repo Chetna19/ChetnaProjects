@@ -1,0 +1,316 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+    xmlns:la="sap.ui.commons.layout"
+    xmlns:c="sap.ui.commons" 
+		controllerName="newklouddata.FourthPage" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Flight Details"
+	     showNavButton="true"
+	     navButtonTap="actBack">
+  <la:MatrixLayout id="test"  column="2" rows="{/FlightCollection?$top=1}">
+     <la:rows>
+     <la:MatrixLayoutRow>
+     <la:cells>
+     <la:MatrixLayoutCell>
+     <la:content>
+          <FlexBox
+          alignItems="Center"
+          justifyContent="Start">
+         <VBox>
+             <items>
+     <Label text="countryFrom"/>
+     <c:TextField value="{flightDetails/countryFrom}"/>
+     <Label text="cityFrom"/>
+      <c:TextField value="{flightDetails/cityFrom}"/>
+      <Label text="airportFrom"/>
+      <c:TextField value="{flightDetails/airportFrom}"/>
+       <Label text="countryTo"/>
+      <c:TextField value="{flightDetails/countryTo}"/>
+       <Label text="cityTo"/>
+      <c:TextField value="{flightDetails/cityTo}"/>
+       <Label text="airportTo"/>
+      <c:TextField value="{flightDetails/airportTo}"/>
+       <Label text="flightTime"/>
+      <c:TextField value="{flightDetails/flightTime}"/>
+       <Label text="departureTime"/>
+      <c:TextField value="{flightDetails/departureTime}"/>
+       <Label text="arrivalTime"/>
+      <c:TextField value="{flightDetails/arrivalTime}"/>
+         <Label text="distance"/>
+      <c:TextField value="{flightDetails/distance}"/>
+        <Label text="distanceUnit"/>
+      <c:TextField value="{flightDetails/distanceUnit}"/>
+        <Label text="flightType"/>
+      <c:TextField value="{flightDetails/flightType}"/>
+      <Label text="period"/>
+      <c:TextField value="{flightDetails/period}"/>
+      </items>
+      </VBox>
+      </FlexBox>
+     </la:content>
+     </la:MatrixLayoutCell>
+     </la:cells>
+     </la:MatrixLayoutRow>
+     </la:rows> 
+     
+       
+       
+   <!-- <la:rows>
+      <la:MatrixLayoutRow>
+         <la:cells>
+             <la:MatrixLayoutCell>
+                 <la:content>
+                 <Label text="countryFrom" id="countryFrom"/>
+                  <Label id="countryFrom" text=""/>
+                  <c:TextField value="{flightDetails/countryFrom}"/> 
+                 </la:content>
+             </la:MatrixLayoutCell>
+         </la:cells>
+     </la:MatrixLayoutRow>
+     
+       <la:MatrixLayoutRow>
+         <la:cells>
+             <la:MatrixLayoutCell>
+                   <la:content>
+                 <Label text="cityFrom"/>
+                  <Label id="cityFrom" text=""/>
+                 <c:TextField value="{flightDetails/cityFrom}"/>
+                 </la:content>
+             </la:MatrixLayoutCell>
+         </la:cells>
+     </la:MatrixLayoutRow>
+     
+        <la:MatrixLayoutRow>
+         <la:cells>
+             <la:MatrixLayoutCell>
+                   <la:content>
+                 <Label text="airportFrom"/>
+                  <Label id="airportFrom" text=""/>
+                 <c:TextField value="{flightDetails/airportFrom}"/>
+                 </la:content>
+             </la:MatrixLayoutCell>
+         </la:cells>
+     </la:MatrixLayoutRow>
+     
+         <la:MatrixLayoutRow>
+         <la:cells>
+             <la:MatrixLayoutCell> 
+                  <la:content>
+                 <Label text="countryTo"/>
+                 <Label id="countryTo" text=""/> 
+                 <c:TextField value="{flightDetails/countryTo}"/>
+                 </la:content>
+             </la:MatrixLayoutCell>
+         </la:cells>
+     </la:MatrixLayoutRow>
+     
+      <la:MatrixLayoutRow>
+         <la:cells>
+             <la:MatrixLayoutCell>
+                   <la:content>
+                 <Label text="cityTo"/>
+                   <Label id="cityTo" text=""/> 
+                 <c:TextField value="{flightDetails/cityTo}"/>
+                 </la:content>
+             </la:MatrixLayoutCell>
+         </la:cells>
+     </la:MatrixLayoutRow>
+     
+       <la:MatrixLayoutRow>
+         <la:cells>
+             <la:MatrixLayoutCell>
+                   <la:content>
+                 <Label text="airportTo"/>
+                 <Label id="airportTo" text=""/> 
+                 <c:TextField value="{flightDetails/airportTo}"/>
+                 </la:content>
+             </la:MatrixLayoutCell>
+         </la:cells>
+     </la:MatrixLayoutRow>
+     
+        <la:MatrixLayoutRow>
+         <la:cells>
+             <la:MatrixLayoutCell>
+                   <la:content>
+                 <Label text="flightTime"/>
+                 <Label id="flightTime" text=""/>
+                 <c:TextField value="{flightDetails/flightTime}"/>
+                 </la:content>
+             </la:MatrixLayoutCell>
+         </la:cells>
+     </la:MatrixLayoutRow>
+     
+         <la:MatrixLayoutRow>
+         <la:cells>
+             <la:MatrixLayoutCell>
+                   <la:content>
+                 <Label text="departureTime"/>
+                 <Label id="departureTime" text=""/> 
+                 <c:TextField value="{flightDetails/departureTime}"/>
+                 </la:content>
+             </la:MatrixLayoutCell>
+         </la:cells>
+     </la:MatrixLayoutRow>
+     
+            <la:MatrixLayoutRow>
+         <la:cells>
+             <la:MatrixLayoutCell>
+                   <la:content>
+                 <Label text="arrivalTime"/>
+                <Label id="arrivalTime" text=""/> 
+                 <c:TextField value="{flightDetails/arrivalTime}"/>
+                 </la:content>
+             </la:MatrixLayoutCell>
+         </la:cells>
+     </la:MatrixLayoutRow>
+     
+              <la:MatrixLayoutRow>
+         <la:cells>
+             <la:MatrixLayoutCell>
+                   <la:content>
+                 <Label text="distance"/>
+                   <Label id="distance" text=""/> 
+                 <c:TextField value="{flightDetails/distance}"/>
+                 </la:content>
+             </la:MatrixLayoutCell>
+         </la:cells>
+     </la:MatrixLayoutRow>
+         
+              <la:MatrixLayoutRow>
+         <la:cells>
+             <la:MatrixLayoutCell>
+                   <la:content>
+                 <Label text="distanceUnit"/>
+                 <Label id="distanceUnit" text=""/> 
+                 <c:TextField value="{flightDetails/distanceUnit}"/>
+                 </la:content>
+             </la:MatrixLayoutCell>
+         </la:cells>
+     </la:MatrixLayoutRow>
+     
+                 <la:MatrixLayoutRow>
+         <la:cells>
+             <la:MatrixLayoutCell>
+                   <la:content>
+                 <Label text="flightType"/>
+                 <Label id="flightType" text=""/>
+                 <c:TextField value="{flightDetails/flightType}"/>
+                 </la:content>
+             </la:MatrixLayoutCell>
+         </la:cells>
+     </la:MatrixLayoutRow>
+     
+         <la:MatrixLayoutRow>
+         <la:cells>
+             <la:MatrixLayoutCell>
+                   <la:content>
+                 <Label text="period"/>
+                  <Label id="period" text=""/> 
+                 <c:TextField value="{flightDetails/period}"/>
+                 </la:content>
+             </la:MatrixLayoutCell>
+         </la:cells>
+     </la:MatrixLayoutRow>     
+     </la:rows>   -->
+     </la:MatrixLayout> 
+     
+	<html:style> 
+	 .sapMPageScroll {
+  min-height: 100%;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #294974;
+}
+
+.sapUiMltCell {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #f4e5a3;
+  font-size: x-large;
+  font-weight: bolder;
+  font-family: serif;
+  font-style: normal;
+}
+
+.sapMLabel {
+  color: #c5e3af;
+  font-size: 0.875rem;
+  font-family: Arial,Helvetica,sans-serif;
+  font-weight: normal;
+}
+
+.sapUiTfStd {
+  background-color: #294974;
+  color: #f4e5a3;
+}
+  </html:style>   
+     <!--   <l:VerticalLayout
+    width="100%">
+    <l:content>
+      <List
+       id="DetailList"
+        items="{/FlightCollection}"
+        headerText="FlightDetails" >
+        <DisplayListItem
+          label="countryFrom"
+          value="{flightDetails/countryFrom}"
+           />
+           <DisplayListItem
+          label="countryTo"
+          value="{flightDetails/countryTo}" />
+      </List>
+    </l:content>
+  </l:VerticalLayout>--> 
+     
+     	<!-- <List 
+    id="FlightList"
+    items="{/FlightCollection}">
+    
+    <items>
+      <StandardListItem
+      title="{connid}"
+      
+      description="{flightDetails/cityFrom}"
+      type="Navigation"
+      press="handleDetailPress" />
+    </items>
+  </List> -->
+  
+  
+   
+   <html:style>
+       .sapMBtnContent {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: middle;
+  color: darksalmon;
+}
+.sapMBtnContent {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: middle;
+  color: #f4e5a3;
+}
+.sapMInputBase>.sapMInputBaseInner, .sapMInputBasePlaceholder {
+  width: 30%;
+}
+</html:style>
+   
+   <footer>
+      <Bar>
+        <contentRight>
+          <Button  id="button1" text="" icon="sap-icon://create" tooltip="add a record" justifyalign="center" width="100px" press="onPressCreate" ></Button>
+          <Button  id="button2" text="" icon="sap-icon://edit" tooltip="update a record" justifyalign="center" width="100px" press="onPressUpdate" ></Button>
+          <Button  id="button3" text="" icon="sap-icon://delete" tooltip="delete a record" justifyalign="center" width="100px" press="onPressDelete" ></Button>     
+        </contentRight>
+      </Bar>
+ </footer>
+   
+	</Page>
+</core:View>
+

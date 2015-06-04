@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="https://openui5.hana.ondemand.com//resources/sap-ui-core.js" id="sap-ui-bootstrap"
+	data-sap-ui-libs="sap.m" data-sap-ui-theme="sap_mvi"
+	data-sap-ui-resourceroots='{"com.app":"./","./":"flightapp"}'>
+	
+</script>
+<script type="text/javascript"></script>
+<!-- <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+<link href="css/frameworks/ui-dark.css" rel="stylesheet" />    
+<link href="css/index.css" rel="stylesheet" />       
+     WinJS (full framework, see https://github.com/winjs/winjs-modules for
+         building a subset version)    
+ <script src="scripts/frameworks/base.js"></script>
+    <script src="scripts/frameworks/ui.js"></script>
+    <script src="scripts/frameworks/winjs.js"></script>
+    <script src="logon.js"></script>
+    <script src="datajs-1.1.2.min.js"></script>  -->
+   
+ <script>
+	sap.ui.localResources("flightapp");	
+    new sap.m.Shell("Shell", {
+        title: "flightapp",
+        app: new sap.ui.core.ComponentContainer({
+            name: 'com.app'
+        })
+    }).placeAt("content");
+
+    </script> 
+</head>
+
+<body class='sapUiBody'>
+	<div id='content'></div>
+</body>
+</html> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+
+		<script src="./resources/sap-ui-core.js"
+				id="sap-ui-bootstrap"
+				data-sap-ui-libs="sap.m,sap.ui.commons"
+				data-sap-ui-theme="sap_bluecrystal">
+		</script>
+		only load the mobile lib "sap.m" and the "sap_bluecrystal" theme
+
+		<script>
+		        var serviceUrl = "proxy/sap/opu/odata/IWFND/RMTSAMPLEFLIGHT/";  
+		        var oModel = new sap.ui.model.odata.ODataModel(serviceUrl,false,"p1794163851","Anjali1#", null,null, null,false);				
+		        sap.ui.getCore().setModel(oModel);
+				sap.ui.localResources("newklouddata");
+				var app = new sap.m.App({initialPage:"idFirstPage1"});
+				var page = sap.ui.view({id:"idFirstPage1", viewName:"newklouddata.FirstPage", type:sap.ui.core.mvc.ViewType.XML});
+				var page1 = sap.ui.view({id:"idSecondPage1", viewName:"newklouddata.SecondPage", type:sap.ui.core.mvc.ViewType.XML});
+				var page2 = sap.ui.view({id:"idThirdPage1", viewName:"newklouddata.ThirdPage", type:sap.ui.core.mvc.ViewType.XML});
+				var page3 = sap.ui.view({id:"idFourthPage1", viewName:"newklouddata.FourthPage", type:sap.ui.core.mvc.ViewType.XML});
+				
+				var page4 = sap.ui.view({id:"idCreatePage1", viewName:"newklouddata.CreatePage", type:sap.ui.core.mvc.ViewType.XML});
+				var page5 = sap.ui.view({id:"idUpdatePage1", viewName:"newklouddata.UpdatePage", type:sap.ui.core.mvc.ViewType.XML});
+				//var page6 = sap.ui.view({id:"idList1", viewName:"newklouddata.List", type:sap.ui.core.mvc.ViewType.XML});
+				app.addPage(page).addPage(page1).addPage(page2).addPage(page3).addPage(page4).addPage(page5);
+				app.placeAt("content");
+		</script>
+
+	</head>
+	<body class="sapUiBody" role="application">
+		<div id="content"></div>
+	</body>
+</html> -->

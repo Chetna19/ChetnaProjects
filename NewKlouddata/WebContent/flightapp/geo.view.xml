@@ -1,0 +1,167 @@
+﻿<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="flightapp.geo" xmlns:html="http://www.w3.org/1999/xhtml">
+		<html:style>
+      sapMPage {
+      height: 100%;
+      position: relative;
+      background-color: rgb(41, 73, 116);
+      }
+      .sapMBar {
+  height: 3rem;
+  line-height: 3rem;
+  color: #666666;
+  background-color: #f2f2f2;
+  text-shadow: 0 0.0625rem 0 rgba(255,255,255,0.5);
+  -webkit-box-shadow: inset 0 -0.0625rem #dddddd;
+  box-shadow: inset 0 -0.0625rem #F9C703;
+}
+      .sapMBtnInner {
+      height: 2.500rem;
+      min-width: 2.500rem;
+      margin: 0;
+      padding: 0;
+      vertical-align: top;
+      border: 1px solid #F9B811;
+      border-radius: 0.125rem;
+      color: rgba(26, 23, 23, 0);
+      text-shadow: 0 1.3px 0 #F9C703;
+      font-family: Arial,Helvetica,sans-serif;
+      font-size: 0.875rem;
+      background-color: #294974;
+      background: -ms-linear-gradient(top,#f7f7f7 0,#f2f2f2 100%);
+      background: -webkit-gradient(linear,left top,left bottom,color-stop(0,#f7f7f7),color-stop(1,#f2f2f2));
+      background: -webkit-linear-gradient(top,#093673 0,#294974 100%);
+      background: linear-gradient(top,#f7f7f7 0,#f2f2f2 100%);
+      }
+      .sapMBtnInner {
+      height: 2.500rem;
+      min-width: 2.500rem;
+      margin: 0;
+      padding: 0;
+      vertical-align: top;
+      border: 1px solid #EFDEDE;
+      border-radius: 0.125rem;
+      color: #F9C703;
+      text-shadow: 0 1px 0 rgba(221, 15, 15, 0);
+      font-family: Arial,Helvetica,sans-serif;
+      font-size: 0.875rem;
+      background-color: #294974;
+      background: -ms-linear-gradient(top,#f7f7f7 0,#f2f2f2 100%);
+      background: -webkit-gradient(linear,left top,left bottom,color-stop(0,#f7f7f7),color-stop(1,#f2f2f2));
+      background: -webkit-linear-gradient(top,#093673 0,#294974 100%);
+      background: linear-gradient(top,#f7f7f7 0,#f2f2f2 100%);
+      }
+      
+  .sapMBar-CTX .sapMLabel {
+  color: #F9C703;
+ 
+}
+
+.sapMBar-CTX.sapMPageHeader .sapMLabel, .sapMDialog-CTX .sapMBar-CTX .sapMLabel {
+  font-family: normal;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.sapMLabel.sapMLabelTBHeader {
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  color: #333333;
+  text-shadow: 0 0.0625rem 0 rgba(255, 255, 255, 0);
+}
+
+.sapUiIcon:before {
+      content: attr(data-sap-ui-icon-content);
+      speak: none;
+      font-weight: bolder;
+      color: #F9C703;
+      -webkit-font-smoothing: antialiased;
+      }
+      
+  .sapMSLIImgIcon, .sapMSLIImgFirstIcon {
+      font-size: 1.375rem;
+      color: #F9C703;
+      margin-left: -1rem;
+      }
+      .sapMLIBImgNav {
+      width: 3rem;
+      height: 3rem;
+      line-height: 3rem;
+      font-size: 0.75rem;
+      color: #F9C703;
+      }
+      
+  .sapMLabel.sapMLabelTBHeader {
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  color: #F9C703;
+  text-shadow: 0 0.0625rem 0 rgba(255, 255, 255, 0);
+}
+
+.sapMPage>section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(25, 74, 121);
+}
+
+.cameraBtnMargin{
+margin-left:100px;
+}
+.txtMarginTop{
+margin-top:10px;
+}
+
+  input[type=text], input[type=password], input[type=email], input[type=number], input[type=tel], input[type=url], input[type=search], textarea, .win-textarea {
+  background-color: rgba(41, 73, 116, 1);
+  border-color: transparent;
+  color: #F9C703;
+}
+.sapMBtnInner {
+    height: 2.500rem;
+    min-width: 2.500rem;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    border: 1px solid #F9C703;
+    border-radius: 0.125rem;
+    color: #0D0505;
+    text-shadow: 0 1px 0 #180A0A;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 0.875rem;
+    background-color: #294974;
+    background: -ms-linear-gradient(top,#f7f7f7 0,#f2f2f2 100%);
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0,#f7f7f7),color-stop(1,#f2f2f2));
+    background: -webkit-linear-gradient(top,#093673 0,#294974 100%);
+    background: linear-gradient(top,#f7f7f7 0,#f2f2f2 100%);
+    }
+
+    </html:style>
+  <Page>
+    <headerContent>
+      <Toolbar>
+        <Button icon="sap-icon://nav-back" press="goBack"/>
+      <Label text="Location"/>
+      </Toolbar>
+    </headerContent>
+    <!--   <Panel> -->
+        <FlexBox
+         alignItems="Center"
+         justifyContent="Center">
+  <VBox>
+   <html:div class="txtMarginTop">
+    <html:input id="txtLocation" type="text"></html:input> 
+    <html:div id="mapDiv" style="position:relative;width:280px;height:400px;">
+    </html:div>
+      <Button id="locationBtn" icon="sap-icon://functional-location" class="cameraBtnMargin" press="findme"/>
+    </html:div>
+    
+  </VBox>
+  </FlexBox>
+ <!--  </Panel> -->
+  </Page>
+</core:View>

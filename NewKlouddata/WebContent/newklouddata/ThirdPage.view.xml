@@ -1,0 +1,79 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="newklouddata.ThirdPage" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Flights"
+	    showNavButton="true"
+	     navButtonTap="actBack">
+ 	<!--  <List 
+    id="FlightList"
+    items="{/FlightCollection}">
+    
+    <items>
+      <StandardListItem
+      title="{flightDetails/cityFrom}"
+      description="{flightDetails/cityTo}"
+      type="Navigation"
+      press="handleDetailPress" />
+    </items>
+  </List> -->
+  
+  <List
+    id="FlightList"
+    items="{/FlightCollection?$top=10}">
+    <items>
+      <ObjectListItem
+       type="Navigation"
+      press="handleDetailPress">
+        <firstStatus>
+          <ObjectStatus
+            text="{flightDetails/cityTo}" />
+        </firstStatus>
+        
+          <secondStatus>
+          <ObjectStatus
+            text="{flightDetails/departureTime}" />
+        </secondStatus>
+      
+        <attributes>
+          <ObjectAttribute text="{flightDetails/cityFrom}" />
+          <ObjectAttribute text="{fldate}" />
+         
+        </attributes>
+      </ObjectListItem>
+    </items>
+  </List> 
+  <html:style>
+  .sapMObjectAttributeDiv .sapMText {
+  font-size: 1rem;
+}
+.sapMTextNoWrap, .sapMTextMaxLine {
+  overflow: hidden;
+  color: #ec8146;
+  font-style: normal;
+  font-size: large;
+  color: .sapMObjLAttrRow { font-size: .875rem; padding-top: .313rem; color: #ec8146;};
+}
+.sapMObjStatusNone {
+  color: #c5e3af;
+  font-size: large;
+}
+
+..sapMObjStatusNone {
+  color: #c5e3af;
+  font-size: medium;
+  font-weight: 600;
+}
+.sapMTextNoWrap, .sapMTextMaxLine {
+  overflow: hidden;
+  color: #ec8146;
+  font-style: normal;
+  font-size: medium;
+  font-weight: 600;
+  color: .sapMObjLAttrRow { font-size: .875rem; padding-top: .313rem; color: #ec8146;};
+}
+</html:style>
+	</Page>
+</core:View>
+
+
+ 
+

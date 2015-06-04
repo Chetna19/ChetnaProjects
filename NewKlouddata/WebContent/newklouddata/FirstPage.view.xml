@@ -1,0 +1,18 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="newklouddata.FirstPage" xmlns:html="http://www.w3.org/1999/xhtml">
+		<Page title="Odata Example">
+		<content>
+		<html:style>
+		.sapMBtnContent {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+    </html:style>
+	
+	 <Button class="sapMBtnContent" id="button1" text="goto_second_page" justifyalign="center" width="100px" press="onPress" ></Button>
+  </content>
+	</Page>
+</core:View>

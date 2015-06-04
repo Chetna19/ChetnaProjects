@@ -1,0 +1,32 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+		controllerName="newklouddata.CreatePage" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Delete Record"
+	    showNavButton="true"
+	     navButtonTap="actBack">
+		<l:VerticalLayout
+    class="marginVerticalContent"
+    width="100%">
+    <l:content>
+      
+    
+      <Label text="Enter Record to delete" />
+      
+      <Input
+        id="idDelete"
+        type="Text"
+        value="{
+        
+          type : 'sap.ui.model.type.String',
+          constraints : {
+            minLength: 1,
+            maxLength: 10
+          }
+        }" />
+          
+     <Button id="Delete" text="Delete" width="110px" press="onDelete" justifyContent="Center"></Button>
+    </l:content>
+  </l:VerticalLayout>
+	</Page>
+</core:View>
+

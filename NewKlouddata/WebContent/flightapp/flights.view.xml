@@ -1,0 +1,246 @@
+﻿<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="flightapp.flights" xmlns:html="http://www.w3.org/1999/xhtml">
+		<html:style>
+      .sapMLIB {
+      border-bottom: 1px solid #297EF0;
+      background-color: #ffffff;
+      padding: 0 1rem 0 1rem;
+      }
+      .sapMBar-CTX .sapMLabel {
+      color: #f4e5a3;
+      }
+      .sapMSLITitle {
+      font-size: 1.3rem;
+      color: #ec8146;
+      padding-bottom: 0.375rem;
+      font-style: normal;
+      }
+      .sapMSLIDescription {
+      font-size: 0.875em;
+      color: #c5e3af;
+      font-style: italic;
+      font-size: large;
+      }
+      .sap-desktop ::-webkit-scrollbar {
+      width: 16px;
+      height: 16px;
+      background-color: #003366;
+      }
+      .sap-desktop ::-webkit-scrollbar {
+      width: 16px;
+      height: 16px;
+      background-color: #003366;
+      }
+      .sap-desktop ::-webkit-scrollbar {
+      width: 16px;
+      height: 16px;
+      background-color: #003366;
+      }
+      Pseudo ::-webkit-scrollbar-thumb element
+      .sap-desktop ::-webkit-scrollbar-thumb {
+      background-color: #003366;
+      }
+      .sap-desktop ::-webkit-scrollbar-thumb {
+      background-color: #003366;
+      }
+      .sap-desktop ::-webkit-scrollbar-thumb {
+      background-color: #003366;
+      }
+
+      .sapUiIcon:before {
+      content: attr(data-sap-ui-icon-content);
+      speak: none;
+      font-weight: bold;
+      -webkit-font-smoothing: antialiased
+      }
+
+
+
+      .sapUiIcon:before {
+      content: attr(data-sap-ui-icon-content);
+      speak: none;
+      font-weight: bolder;
+      color: whitesmoke;
+      -webkit-font-smoothing: antialiased;
+      }
+
+
+
+      .sapMBarPH {
+      display: inline-block;
+
+      }
+      .sap-desktop .sapMBar.sapMPageHeader {
+      background-color: #294974;
+      filter: none;
+      background-image: none;
+      }
+
+      .sapUiBody {
+      background-color: #f2f2f2;
+      color: #000000;
+      font-family: Arial,Helvetica,sans-serif;
+      font-size: 16px;
+      -webkit-tap-highlight-color: transparent;
+      background-color: lightgreen;
+      }
+
+
+      .sapMListBGSolid .sapMLIB {
+      background-color:#294974;
+      }
+      .sapMListShowSeparatorsAll {
+      background-color: black;
+      }
+
+      .sapMBar-CTX.sapMPageHeader .sapMLabel, .sapMDialog-CTX .sapMBar-CTX .sapMLabel {
+      font-family: normal;
+      font-size: 2rem;
+      font-weight: bold;
+      }
+
+      sapMSLIIcon>.sapMLIBContent {
+      margin-left: -1rem;
+      border-bottom-color: aqua;
+      }
+
+      .sapMBar.sapMPageHeader:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      top: 0;
+      border-top: #294974;
+      z-index: 7;
+      }
+      .sapMTextNoWrap, .sapMTextMaxLine {
+      overflow: hidden;
+      color: #ec8146;
+      font-style: italic;
+      color: .sapMObjLAttrRow { font-size: .875rem; padding-top: .313rem; color: #ec8146;};
+      }
+      .sapMObjStatusNone {
+      color: #c5e3af;
+      }
+      .sap-desktop ::-webkit-scrollbar {
+      width: 16px;
+      height: 16px;
+      background-color: #003366;
+      }
+      .sap-desktop ::-webkit-scrollbar-thumb {
+      background-color: #003366;
+      }
+
+      .sapMListHdr {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      font: normal 1.5rem;
+      text-shadow: 0 1px 0 #ffffff;
+      color: #F9C703;
+      height: 3rem;
+      line-height: 3rem;
+      padding: 0 1rem;
+      background-color: rgba(41, 73, 116, 1);
+      border-bottom: 1px solid #cccccc;
+      }
+
+
+      .sapMTB {
+      padding: 0;
+      height: 3rem;
+      background: rgba(41, 73, 116, 1);
+      border-bottom: 1px solid #F9C703;
+      
+      }
+
+      .sapMTB-Transparent-CTX .sapMLabel {
+      font-weight: normal;
+      font-size: 1rem;
+      font-family: Arial,Helvetica,sans-serif;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0);
+      color: #F9C703;
+      }
+      .sapUiBody {
+      background-color: #f2f2f2;
+      color: #000000;
+      font-family: Arial,Helvetica,sans-serif;
+      font-size: 16px;
+      -webkit-tap-highlight-color: transparent;
+      background-color: lightgreen;
+      }
+      .sap-desktop .sapMLIBSelectD:hover:not(:active), .sap-desktop .sapMLIB:not(.sapMLIBActive):not(.sapMLIBTypeInactive):not(.sapMLIBTypeDetail):not(.sapMALI):hover, .sap-desktop .sapMListUl:not(.sapMListModeDelete):not(.sapMListModeNone) .sapMLIB:not(.sapMLIBActive):not(.sapMALI):hover, .sap-desktop .sapMLIB:not(.sapMLIBActive):not(.sapMLIBSelected):not(.sapMLIBTypeInactive):not(.sapMLIBTypeDetail):not(.sapMALI):hover>td, .sap-desktop .sapMLIB:not(.sapMLIBActive):not(.sapMLIBTypeInactive):not(.sapMLIBTypeDetail):not(.sapMALI):not(.sapMLIBSelected):hover + .sapMListTblSubRow, .sap-desktop .sapMListTblSubRow:not(.sapMLIBActive):not(.sapMLIBTypeInactive):not(.sapMLIBTypeDetail):not(.sapMALI):hover {
+      background: #518EE0;
+      }
+
+      #__xmlview1--listback {
+      border-style: solid 0px;
+      background-clip: padding-box;
+      margin: 0px;
+      min-height: 32px;
+      min-width: 25px;
+      padding: 4px 8px;
+      border-width: 2px;
+      font-size: 11pt;
+      font-weight: 600;
+      line-height: 1.3636;
+      }
+
+      .sapMTB-Transparent-CTX .sapMLabel {
+      margin-right: 1rem;
+      font-weight: normal;
+      font-size: 1.2rem;
+      font-family: Arial,Helvetica,sans-serif;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0);
+      color: #F9C703;
+      }
+
+      button:hover, input[type=button]:hover, input[type=reset]:hover {
+      background-color: rgba(255, 255, 255, 0);
+      }
+
+      .sapUiIcon:before {
+      content: attr(data-sap-ui-icon-content);
+      speak: none;
+      font-weight: bolder;
+      color: #F9C703;
+      -webkit-font-smoothing: antialiased;
+      }
+
+      .sapMSLIImgIcon, .sapMSLIImgFirstIcon {
+      font-size: 1.375rem;
+      color: #F9C703;
+      margin-left: -1rem;
+      }
+      .sapMLIBImgNav {
+      width: 3rem;
+      height: 3rem;
+      line-height: 3rem;
+      font-size: 0.75rem;
+      color: #F9C703;
+      }
+
+    </html:style>
+  <Page showHeader="false">
+    <List
+      id="flights" growing="true" growingThreshold="10" growingScrollToLoad="false" items="{/}" >
+
+      <items>
+        <StandardListItem
+        title="{flightDetails/cityFrom}"
+        description="{flightDetails/cityTo}"
+        type="Navigation"
+        press="getDetails" />
+      </items>
+      <headerToolbar>
+        <Toolbar>
+          <Button id="listback" icon="sap-icon://nav-back" press="goBack" />
+          
+          <Label text="Flights"/>
+        
+        </Toolbar>
+      </headerToolbar>
+    </List>
+  </Page>
+</core:View>
+
+
